@@ -1,8 +1,10 @@
+import React from "react";
+
 const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-auto bg-gradient-to-b from-black to-gray-800 p-4 text-white"
+      className="w-full h-auto bg-gradient-to-b from-black to-gray-800 p-4 text-white md:h-screen"
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
@@ -31,7 +33,6 @@ const Contact = () => {
             />
             <textarea
               name="message"
-              id=""
               rows="8"
               placeholder="Enter your message"
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"

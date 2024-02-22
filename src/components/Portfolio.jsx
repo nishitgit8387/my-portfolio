@@ -1,6 +1,6 @@
 import brand_page from "../assets/portfolio/brand_page.png";
 import contact_page from "../assets/portfolio/contact_page.png";
-import contect_app from "../assets/portfolio/contect_app.png";
+
 import crypto_dashboard from "../assets/portfolio/crypto_dashboard.png";
 import dashboard_auth from "../assets/portfolio/dashboard_auth.png";
 import Dice_game from "../assets/portfolio/Dice_game.png";
@@ -52,7 +52,7 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-auto"
+      className="bg-gradient-to-b from-black to-gray-800 w-full h-auto text-white md:h-auto"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -72,7 +72,9 @@ const Portfolio = () => {
                   className="rounded-md w-[100%] h-[200px] duration-200 hover:scale-105"
                 />
                 <div className="flex flex-col justify-center items-center">
-                  <h3 className="text-xl mt-2 font-bold">{title}</h3>
+                  <h3 className="hidden md:block text-xl mt-2 font-bold">
+                    {title}
+                  </h3>
                   <button
                     className="w-[90%] bg-blue-600 rounded-md px-6 py-3 m-4 duration-200 hover:scale-105"
                     onClick={() => openCode(codeLink)}
