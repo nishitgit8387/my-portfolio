@@ -15,9 +15,9 @@ const About = () => {
         <div className="text-md md:text-xl mt-20 mb-8">
           <p className="mb-4">
             My name is Nishit Patel. I am from Ahmedabad. I am a Diploma
-            Mechanical Dropout from GTU. I have 5 years of experience as a VMC
+            Mechanical engineer from GTU. I have 5 years of experience as a VMC
             Machine Programmer. I would like to change my field from VMC
-            Programmer to Web developer.
+            Programmer to Frontend developer.
           </p>
           <p className="mb-4">
             I have completed certified training in web design from Tops
