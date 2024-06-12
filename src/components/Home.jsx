@@ -14,9 +14,10 @@ const Home = () => {
             I'm a Frontend Developer
           </h2>
           <p className="text-gray-500 py-4">
-            I have a 1.5 years of experience for building and designing web
-            applications.currently, I love to work on web application using
-            technologies like React,Typescript,Tailwind css, Chakra Ui.{" "}
+            Enthusiastic and detail-oriented fresher frontend developer with
+            hands-on experience in HTML, CSS, JavaScript, and React. Proficient
+            in creating responsive and user-friendly web interfaces. Eager to
+            contribute to dynamic teams and learn new technologies.
           </p>
           <div>
             <Link

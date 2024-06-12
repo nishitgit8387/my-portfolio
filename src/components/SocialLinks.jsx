@@ -39,7 +39,7 @@ const SocialLinks = () => {
           Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "/Nishit-cv.pdf",
+      href: "/Nishit-Patel.pdf",
       style: "rounded-br-md",
       download: true,
     },
