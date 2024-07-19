@@ -1,54 +1,63 @@
-import brand_page from "../assets/portfolio/brand_page.png";
-import contact_page from "../assets/portfolio/contact_page.png";
-
+import gemini_clone from "../assets/portfolio/gemini_clone.png";
+import youtube_clone from "../assets/portfolio/youtube_clone.png";
 import crypto_dashboard from "../assets/portfolio/crypto_dashboard.png";
-import dashboard_auth from "../assets/portfolio/dashboard_auth.png";
+import chat_app from "../assets/portfolio/chat_app.png";
 import Dice_game from "../assets/portfolio/Dice_game.png";
-import foodyzone from "../assets/portfolio/foodyzone.png";
+import ecom from "../assets/portfolio/ecom.png";
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: brand_page,
-      title: "Brand Page",
-      codeLink: "https://github.com/nishitgit8387/react-brand-page",
+      src: gemini_clone,
+      title: "Gemini Clone",
+      previewLink: "https://reactjs-gemini-clone.vercel.app/",
+      codeLink: "https://github.com/nishitgit8387/reactjs-gemini-clone",
     },
     {
       id: 2,
-      src: contact_page,
-      title: "Contact Page",
-      codeLink: "https://github.com/nishitgit8387/react-contectus-page",
+      src: youtube_clone,
+      title: "Youtube Clone",
+      previewLink: "https://react-youtube-clone-rho-nine.vercel.app/",
+      codeLink: "https://github.com/nishitgit8387/react-youtube-clone",
     },
     {
       id: 3,
-      src: Dice_game,
-      title: "Dice Game",
-      codeLink: "https://github.com/nishitgit8387/react-dice-game",
+      src: chat_app,
+      title: "Chat App",
+      previewLink:
+        "https://react-chat-6vrosuf6l-nishit-patels-projects-42befa19.vercel.app/",
+      codeLink: "https://github.com/nishitgit8387/react-chat-app",
     },
     {
       id: 4,
+      src: ecom,
+      title: "E-Commerce",
+      previewLink: "https://react-e-commerce-opal-nine.vercel.app/",
+      codeLink: "https://github.com/nishitgit8387/react-e-commerce",
+    },
+    {
+      id: 5,
       src: crypto_dashboard,
       title: "Crypto Dashboard",
       codeLink: "https://github.com/nishitgit8387/react-crypto-dashboard",
     },
     {
-      id: 5,
-      src: dashboard_auth,
-      title: "Dashboard Authentication",
-      codeLink:
-        "https://github.com/nishitgit8387/react-dashboard-authentication",
-    },
-    {
       id: 6,
-      src: foodyzone,
-      title: "Foody Zone",
-      codeLink: "https://github.com/nishitgit8387/react-foody-zone",
+      src: Dice_game,
+      title: "Dice Game",
+      codeLink: "https://github.com/nishitgit8387/react-dice-game",
     },
   ];
+
+  const openPreview = (previewLink) => {
+    window.open(previewLink, "_blank");
+  };
+
   const openCode = (codeLink) => {
     window.open(codeLink, "_blank");
   };
+
   return (
     <div
       name="portfolio"
@@ -63,28 +72,46 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src, title, codeLink }) => {
-            return (
-              <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-                <img
-                  src={src}
-                  alt=""
-                  className="rounded-md w-[100%] h-[200px] duration-200 hover:scale-105"
-                />
-                <div className="flex flex-col justify-center items-center">
-                  <h3 className="hidden md:block text-xl mt-2 font-bold">
-                    {title}
-                  </h3>
-                  <button
-                    className="w-[90%] bg-blue-600 rounded-md px-6 py-3 m-4 duration-200 hover:scale-105"
-                    onClick={() => openCode(codeLink)}
-                  >
-                    Code
-                  </button>
+          {portfolios.map(({ id, src, title, codeLink, previewLink }) => (
+            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
+              <img
+                src={src}
+                alt={title}
+                className="rounded-md w-full h-52 object-cover duration-200 hover:scale-105"
+              />
+              <div className="flex flex-col justify-center items-center">
+                <h3 className="hidden md:block text-xl mt-2 font-bold">
+                  {title}
+                </h3>
+                <div className="buttons flex justify-around">
+                  {previewLink && (
+                    <>
+                      <button
+                        className="w-[50%] bg-green-500 rounded-md px-4 py-3 m-2 duration-200 hover:scale-105"
+                        onClick={() => openPreview(previewLink)}
+                      >
+                        Preview
+                      </button>
+                      <button
+                        className="w-[50%] bg-blue-500 rounded-md px-4 py-3 m-2 duration-200 hover:scale-105"
+                        onClick={() => openCode(codeLink)}
+                      >
+                        Code
+                      </button>
+                    </>
+                  )}
+                  {!previewLink && (
+                    <button
+                      className="w-[100%] bg-blue-500 rounded-md px-6 py-3 m-2 duration-200 hover:scale-105"
+                      onClick={() => openCode(codeLink)}
+                    >
+                      Code
+                    </button>
+                  )}
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </div>
