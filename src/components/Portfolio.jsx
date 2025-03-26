@@ -2,27 +2,33 @@ import gemini_clone from "../assets/portfolio/gemini_clone.png";
 import youtube_clone from "../assets/portfolio/youtube_clone.png";
 import crypto_dashboard from "../assets/portfolio/crypto_dashboard.png";
 import chat_app from "../assets/portfolio/chat_app.png";
-import Dice_game from "../assets/portfolio/Dice_game.png";
+import bima_labs from "../assets/portfolio/bima_labs.png";
 import ecom from "../assets/portfolio/ecom.png";
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
+      src: bima_labs,
+      title: "Bima Labs",
+      previewLink: "https://bima.money/",
+    },
+    {
+      id: 2,
       src: gemini_clone,
       title: "Gemini Clone",
       previewLink: "https://reactjs-gemini-clone.vercel.app/",
       codeLink: "https://github.com/nishitgit8387/reactjs-gemini-clone",
     },
     {
-      id: 2,
+      id: 3,
       src: youtube_clone,
       title: "Youtube Clone",
       previewLink: "https://react-youtube-clone-rho-nine.vercel.app/",
       codeLink: "https://github.com/nishitgit8387/react-youtube-clone",
     },
     {
-      id: 3,
+      id: 4,
       src: chat_app,
       title: "Chat App",
       previewLink:
@@ -30,23 +36,17 @@ const Portfolio = () => {
       codeLink: "https://github.com/nishitgit8387/react-chat-app",
     },
     {
-      id: 4,
+      id: 5,
       src: ecom,
       title: "E-Commerce",
       previewLink: "https://react-e-commerce-opal-nine.vercel.app/",
       codeLink: "https://github.com/nishitgit8387/react-e-commerce",
     },
     {
-      id: 5,
+      id: 6,
       src: crypto_dashboard,
       title: "Crypto Dashboard",
       codeLink: "https://github.com/nishitgit8387/react-crypto-dashboard",
-    },
-    {
-      id: 6,
-      src: Dice_game,
-      title: "Dice Game",
-      codeLink: "https://github.com/nishitgit8387/react-dice-game",
     },
   ];
 
@@ -84,7 +84,7 @@ const Portfolio = () => {
                   {title}
                 </h3>
                 <div className="buttons flex justify-around">
-                  {previewLink && (
+                  {previewLink && codeLink && (
                     <>
                       <button
                         className="w-[50%] bg-green-500 rounded-md px-4 py-3 m-2 duration-200 hover:scale-105"
@@ -99,6 +99,14 @@ const Portfolio = () => {
                         Code
                       </button>
                     </>
+                  )}
+                  {!codeLink && (
+                    <button
+                      className="w-[100%] bg-green-500 rounded-md px-4 py-3 m-2 duration-200 hover:scale-105"
+                      onClick={() => openPreview(previewLink)}
+                    >
+                      Preview
+                    </button>
                   )}
                   {!previewLink && (
                     <button

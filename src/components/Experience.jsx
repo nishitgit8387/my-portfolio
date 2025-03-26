@@ -4,12 +4,12 @@ import js from "../assets/experience/js.png";
 import react from "../assets/experience/react.png";
 import redux from "../assets/experience/redux.png";
 import tailwind from "../assets/experience/tailwind.png";
-import firebase from "../assets/experience/firebase.png";
+import web3js from "../assets/experience/web3js.jpg";
 import typescript from "../assets/experience/typescript.png";
 import github from "../assets/experience/github.png";
-import figma from "../assets/experience/figma.png";
-import sass from "../assets/experience/sass.png";
-import bootstrap from "../assets/experience/bootstrap.png";
+import wagmi from "../assets/experience/wagmi.jpg";
+import rainbow from "../assets/experience/rainbow.svg";
+import next from "../assets/experience/next.png";
 
 const Experience = () => {
   const technologies = [
@@ -39,51 +39,51 @@ const Experience = () => {
     },
     {
       id: 5,
+      src: next,
+      title: "NEXT",
+      style: "shadow-sky-500",
+    },
+    {
+      id: 6,
       src: redux,
       title: "REDUX",
       style: "shadow-purple-500",
     },
     {
-      id: 6,
+      id: 7,
       src: typescript,
       title: "TYPESCRIPT",
       style: "shadow-blue-500",
     },
     {
-      id: 7,
+      id: 8,
       src: tailwind,
       title: "TAILWIND CSS",
       style: "shadow-sky-400",
     },
     {
-      id: 8,
-      src: firebase,
-      title: "FIREBASE",
+      id: 9,
+      src: web3js,
+      title: "Web3 JS",
       style: "shadow-sky-300",
     },
     {
-      id: 9,
+      id: 10,
       src: github,
       title: "GITHUB",
       style: "shadow-gray-400",
     },
     {
-      id: 10,
-      src: figma,
-      title: "FIGMA",
+      id: 11,
+      src: wagmi,
+      title: "Wagmi",
       style: "shadow-green-500",
     },
     {
-      id: 11,
-      src: sass,
-      title: "SASS",
-      style: "shadow-sky-300",
-    },
-    {
       id: 12,
-      src: bootstrap,
-      title: "BOOTSTRAP",
-      style: "shadow-purple-800",
+      src: rainbow,
+      title: "Rainbow kit",
+      style: "shadow-sky-300",
     },
   ];
   return (
@@ -105,7 +105,7 @@ const Experience = () => {
                 key={id}
                 className={`shadow-md hover:scale-105 duration-500 py-2 flex flex-col justify-between rounded-lg ${style}`}
               >
-                <img src={src} alt="" className="w-20 mx-auto" />
+                <img src={src} alt="" className="w-20 mx-auto rounded-md" />
                 <p className="mt-4">{title}</p>
               </div>
             );

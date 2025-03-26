@@ -14,21 +14,23 @@ const About = () => {
         </div>
         <div className="text-md md:text-xl mt-20 mb-8">
           <p className="mb-4">
-            My name is Nishit Patel. I am from Ahmedabad. I am a Diploma
-            Mechanical engineer from GTU. I have 5 years of experience as a VMC
-            Machine Programmer. I would like to change my field from VMC
-            Programmer to Frontend developer.
+            I’m Nishit Patel, a Web3 Frontend Developer based in Ahmedabad. I
+            transitioned from a VMC Machine Programmer to the world of
+            blockchain and DeFi applications, bringing precision and
+            problem-solving skills from my engineering background into frontend
+            development.
           </p>
           <p className="mb-4">
-            I have completed certified training in web design from Tops
-            Technologies Pvt. Ltd., Ahmedabad, and specialized in ReactJS and
-            Redux through KG Coding. With a solid foundation and a hunger for
-            learning, I'm excited to dive into the world of frontend development
-            and create engaging digital experiences.
+            I specialize in React, Next.js, TypeScript, and Web3 technologies,
+            crafting seamless and engaging dApp experiences. My journey began
+            with a certified web design training from Tops Technologies Pvt.
+            Ltd., followed by advanced ReactJS and Redux specialization at KG
+            Coding. Today, I work at Digichain Global Holdings LLC for Bima
+            Labs, where I build scalable and interactive DeFi solutions.
           </p>
           <p>
-            When I'm not coding, you'll find me exploring the outdoors. Join me
-            as I embark on this exciting journey into the realm of web
+            When I’m not coding, I love exploring the outdoors and embracing new
+            challenges. Join me as I continue pushing the boundaries of Web3
             development!
           </p>
         </div>
